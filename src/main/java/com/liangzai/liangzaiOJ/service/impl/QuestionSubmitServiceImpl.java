@@ -125,7 +125,6 @@ public class QuestionSubmitServiceImpl extends ServiceImpl<QuestionSubmitMapper,
     @Override
     public QuestionSubmitVO getQuestionSubmitVO(QuestionSubmit questionSubmit, HttpServletRequest request) {
         QuestionSubmitVO questionSubmitVO = QuestionSubmitVO.objToVo(questionSubmit);
-        long questionSubmitId = questionSubmit.getId();
         // 1. 关联查询用户信息
         Long userId = questionSubmit.getUserId();
         User user = null;
